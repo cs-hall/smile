@@ -81,7 +81,7 @@ class LogReader(object):
         self._append_columns = append_columns
 
         # set up the unpickler
-        self._unpickler = pickle.Unpickler(self._file)
+        self._unpickler = pickle.Unpickler(self._file, encoding="latin1")
 
     def read_record(self):
         """Returns a dicitionary with the field names as keys.
